@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,33 +14,60 @@ export class AppComponent implements OnInit {
   menuBranding: any;
   navItems: any;
   showMenu: any;
+  isHome = false;
 
-  ngOnInit(){
+  constructor(private router: Router) {};
+
+  ngOnInit() {
     this.menuBtn = document.querySelector('.menu-btn');
     this.menu = document.querySelector('.menu');
     this.menuNav = document.querySelector('.menu-nav');
     this.menuBranding = document.querySelector('.menu-branding');
     this.navItems = document.querySelectorAll('.nav-item');
     this.showMenu = false;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        console.log(event.url);
+        
+        if (event.url !== "/") {
+          this.removeMenuItems();
+          this.isHome = false;
+        } else {
+          this.isHome = true;
+        }
+      }
+    })
   }
 
   
 
   toggleMenu() {
     if (!this.showMenu) {
-      this.menuBtn.classList.add('close');
-      this.menu.classList.add('show');
-      this.menuNav.classList.add('show');
-      this.menuBranding.classList.add('show');
-      this.navItems.forEach(item => item.classList.add('show'));
-      this.showMenu = true;
+      this.showMenuItems();
     } else {
-      this.menuBtn.classList.remove('close');
-      this.menu.classList.remove('show');
-      this.menuNav.classList.remove('show');
-      this.menuBranding.classList.remove('show');
-      this.navItems.forEach(item => item.classList.remove('show'));
-      this.showMenu = false;
+      this.removeMenuItems();
     }
+  }
+
+  showMenuItems() {
+    this.menuBtn.classList.add('close');
+    this.menu.classList.add('show');
+    this.menuNav.classList.add('show');
+    this.menuBranding.classList.add('show');
+    this.navItems.forEach(item => item.classList.add('show'));
+    this.showMenu = true;
+  }
+
+  removeMenuItems() {
+    this.menuBtn.classList.remove('close');
+    this.menu.classList.remove('show');
+    this.menuNav.classList.remove('show');
+    this.menuBranding.classList.remove('show');
+    this.navItems.forEach(item => item.classList.remove('show'));
+    this.showMenu = false;
+  }
+
+  menuItemClicked(event) {
+    this.removeMenuItems();
   }
 }
