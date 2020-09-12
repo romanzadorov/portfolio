@@ -4,22 +4,38 @@
     </div>
     <ul class="menu-nav">
       <li class="nav-item current">
-        <a href="" class="nav-link">
+        <a id="home" 
+        href="" 
+        [routerLink]="'home'" 
+        (click)="menuItemClicked($event)"
+        class="nav-link">
           Home
         </a>
       </li>
       <li class="nav-item">
-        <a id="about" href="" [routerLink]="'about'" class="nav-link" (click)="menuItemClicked($event)">
+        <a id="about"
+        href="" 
+        [routerLink]="'about'" 
+        class="nav-link" 
+        (click)="menuItemClicked($event)">
           About Me
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link">
+        <a id="myWork" 
+        href="" 
+        [routerLink]="'myWork'" 
+        (click)="menuItemClicked($event)"
+        class="nav-link">
           My Work
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link">
+        <a id="contacts" 
+        href="" 
+        [routerLink]="'contacts'" 
+        (click)="menuItemClicked($event)"
+        class="nav-link">
           How To Reach Me
         </a>
       </li>
