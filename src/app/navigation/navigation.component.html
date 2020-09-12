@@ -1,43 +1,51 @@
 <nav class="menu">
-    <div class="menu-branding">
-      <div class="portrait"></div>
-    </div>
-    <ul class="menu-nav">
-      <li class="nav-item current">
-        <a id="home" 
-        href="" 
-        [routerLink]="'home'" 
+  <div class="menu-branding">
+    <div class="portrait"></div>
+  </div>
+  <ul class="menu-nav">
+    <li class="nav-item">
+      <a
+        id="home"
+        href=""
+        [routerLink]="'home'"
         (click)="menuItemClicked($event)"
-        class="nav-link">
-          Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="about"
-        href="" 
-        [routerLink]="'about'" 
-        class="nav-link" 
-        (click)="menuItemClicked($event)">
-          About Me
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="myWork" 
-        href="" 
-        [routerLink]="'myWork'" 
+        class="nav-link"
+      >
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        id="about"
+        href=""
+        [routerLink]="'about'"
+        class="nav-link"
         (click)="menuItemClicked($event)"
-        class="nav-link">
-          My Work
-        </a>
-      </li>
-      <li class="nav-item">
-        <a id="contacts" 
-        href="" 
-        [routerLink]="'contacts'" 
+      >
+        About Me
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        id="myWork"
+        href=""
+        [routerLink]="'myWork'"
         (click)="menuItemClicked($event)"
-        class="nav-link">
-          How To Reach Me
-        </a>
-      </li>
-    </ul>
-  </nav>
+        class="nav-link"
+      >
+        My Work
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        id="contacts"
+        href=""
+        [routerLink]="'contacts'"
+        (click)="menuItemClicked($event)"
+        class="nav-link"
+      >
+        How To Reach Me
+      </a>
+    </li>
+  </ul>
+</nav>
