@@ -129,8 +129,9 @@ body {
 }
 
 #bg-img {
-  background: url(../src/assets/img/background.jpg);
-  background: rgba(68, 68, 68, 0.9), url(../src/assets/img/background.jpg);
+  background: url(../src/assets/img/code_background_2.jpg);
+  background: rgba(68, 68, 68, 0.9),
+    url(../src/assets/img/code_background_2.jpg);
   background-attachment: fixed;
   background-size: cover;
 }

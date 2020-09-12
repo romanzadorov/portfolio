@@ -27,9 +27,6 @@ export class AppComponent implements OnInit {
     this.showMenu = false;
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log(event.url);
-        console.log(this.navItems);
-
         if (event.url !== "/") {
           this.removeMenuItems();
           this.isHome = false;
