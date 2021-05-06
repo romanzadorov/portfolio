@@ -260,6 +260,9 @@ main#home h1 {
 .boxes div:hover span {
   color: #000;
 }
+.boxes div:hover a {
+  color: #000;
+}
 
 .btn,
 .btn-dark,
