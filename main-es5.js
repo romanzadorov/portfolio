@@ -91,7 +91,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<main id=\"contact\">\n  <h1 class=\"lg-heading\">\n    Contact\n    <span class=\"text-secondary\">Me</span>\n  </h1>\n  <h2 class=\"sm-heading\">This is how you can reach me...</h2>\n  <div class=\"boxes\">\n    <div><span class=\"text-secondary\">Email: </span> happydeveloper@gmail.com</div>\n    <div><span class=\"text-secondary\">Phone: </span> (703) 444-5555</div>\n    <div>\n      <a class=\"text-secondary\" href=\"https://www.linkedin.com/in/zadoroff/\" target=\"_blank\">LinkedIn\n      </a>\n    </div>\n    <div>\n      <span class=\"text-secondary\">Address: </span> Washington DC, Metro-area, Virginia\n    </div>\n  </div>\n</main>\n";
+    __webpack_exports__["default"] = "<main id=\"contact\">\n  <h1 class=\"lg-heading\">\n    Contact\n    <span class=\"text-secondary\">Me</span>\n  </h1>\n  <h2 class=\"sm-heading\">This is how you can reach me...</h2>\n  <div class=\"boxes\">\n    <div><span class=\"text-secondary\">Email: </span> frontend.developer.dc@gmail.com</div>\n    <div>\n      <a class=\"text-secondary\" href=\"https://www.linkedin.com/in/zadoroff/\" target=\"_blank\">LinkedIn\n      </a>\n    </div>\n    <div>\n      <span class=\"text-secondary\">Address: </span> Washington DC, Metro-area, Virginia\n    </div>\n  </div>\n</main>\n";
     /***/
   },
 
